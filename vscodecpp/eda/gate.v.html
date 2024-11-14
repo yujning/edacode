@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mermaid_20241106_163559.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+    <style>
+        /* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+        /*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+        body {
+            font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+            font-size: var(--vscode-markdown-font-size, 14px);
+            padding: 0 26px;
+            line-height: var(--vscode-markdown-line-height, 22px);
+            word-wrap: break-word;
+        }
+
+        #code-csp-warning {
+            position: fixed;
+            top: 0;
+            right: 0;
+            color: white;
+            margin: 16px;
+            text-align: center;
+            font-size: 12px;
+            font-family: sans-serif;
+            background-color: #444444;
+            cursor: pointer;
+            padding: 6px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+        }
+
+        #code-csp-warning:hover {
+            text-decoration: none;
+            background-color: #007acc;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+        }
+
+        body.scrollBeyondLastLine {
+            margin-bottom: calc(100vh - 22px);
+        }
+
+        body.showEditorSelection .code-line {
+            position: relative;
+        }
+
+        body.showEditorSelection .code-active-line:before,
+        body.showEditorSelection .code-line:hover:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -12px;
+            height: 100%;
+        }
+
+        body.showEditorSelection li.code-active-line:before,
+        body.showEditorSelection li.code-line:hover:before {
+            left: -30px;
+        }
+
+        .vscode-light.showEditorSelection .code-active-line:before {
+            border-left: 3px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .vscode-light.showEditorSelection .code-line:hover:before {
+            border-left: 3px solid rgba(0, 0, 0, 0.40);
+        }
+
+        .vscode-light.showEditorSelection .code-line .code-line:hover:before {
+            border-left: none;
+        }
+
+        .vscode-dark.showEditorSelection .code-active-line:before {
+            border-left: 3px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .vscode-dark.showEditorSelection .code-line:hover:before {
+            border-left: 3px solid rgba(255, 255, 255, 0.60);
+        }
+
+        .vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+            border-left: none;
+        }
+
+        .vscode-high-contrast.showEditorSelection .code-active-line:before {
+            border-left: 3px solid rgba(255, 160, 0, 0.7);
+        }
+
+        .vscode-high-contrast.showEditorSelection .code-line:hover:before {
+            border-left: 3px solid rgba(255, 160, 0, 1);
+        }
+
+        .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+            border-left: none;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 1px solid -webkit-focus-ring-color;
+            outline-offset: -1px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            border-bottom: 2px solid;
+        }
+
+        h1 {
+            padding-bottom: 0.3em;
+            line-height: 1.2;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: normal;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table>thead>tr>th {
+            text-align: left;
+            border-bottom: 1px solid;
+        }
+
+        table>thead>tr>th,
+        table>thead>tr>td,
+        table>tbody>tr>th,
+        table>tbody>tr>td {
+            padding: 5px 10px;
+        }
+
+        table>tbody>tr+tr>td {
+            border-top: 1px solid;
+        }
+
+        blockquote {
+            margin: 0 7px 0 5px;
+            padding: 0 16px 0 10px;
+            border-left-width: 5px;
+            border-left-style: solid;
+        }
+
+        code {
+            font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+            font-size: 1em;
+            line-height: 1.357em;
+        }
+
+        body.wordWrap pre {
+            white-space: pre-wrap;
+        }
+
+        pre:not(.hljs),
+        pre.hljs code>div {
+            padding: 16px;
+            border-radius: 3px;
+            overflow: auto;
+        }
+
+        pre code {
+            color: var(--vscode-editor-foreground);
+            tab-size: 4;
+        }
+
+        /** Theming */
+
+        .vscode-light pre {
+            background-color: rgba(220, 220, 220, 0.4);
+        }
+
+        .vscode-dark pre {
+            background-color: rgba(10, 10, 10, 0.4);
+        }
+
+        .vscode-high-contrast pre {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .vscode-high-contrast h1 {
+            border-color: rgb(0, 0, 0);
+        }
+
+        .vscode-light table>thead>tr>th {
+            border-color: rgba(0, 0, 0, 0.69);
+        }
+
+        .vscode-dark table>thead>tr>th {
+            border-color: rgba(255, 255, 255, 0.69);
+        }
+
+        .vscode-light h1,
+        .vscode-light hr,
+        .vscode-light table>tbody>tr+tr>td {
+            border-color: rgba(0, 0, 0, 0.18);
+        }
+
+        .vscode-dark h1,
+        .vscode-dark hr,
+        .vscode-dark table>tbody>tr+tr>td {
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+    </style>
+
+    <style>
+        /* Tomorrow Theme */
+        /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+        /* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+        /* Tomorrow Comment */
+        .hljs-comment,
+        .hljs-quote {
+            color: #8e908c;
+        }
+
+        /* Tomorrow Red */
+        .hljs-variable,
+        .hljs-template-variable,
+        .hljs-tag,
+        .hljs-name,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-regexp,
+        .hljs-deletion {
+            color: #c82829;
+        }
+
+        /* Tomorrow Orange */
+        .hljs-number,
+        .hljs-built_in,
+        .hljs-builtin-name,
+        .hljs-literal,
+        .hljs-type,
+        .hljs-params,
+        .hljs-meta,
+        .hljs-link {
+            color: #f5871f;
+        }
+
+        /* Tomorrow Yellow */
+        .hljs-attribute {
+            color: #eab700;
+        }
+
+        /* Tomorrow Green */
+        .hljs-string,
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-addition {
+            color: #718c00;
+        }
+
+        /* Tomorrow Blue */
+        .hljs-title,
+        .hljs-section {
+            color: #4271ae;
+        }
+
+        /* Tomorrow Purple */
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #8959a8;
+        }
+
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            color: #4d4d4c;
+            padding: 0.5em;
+        }
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+    </style>
+
+    <style>
+        /*
+ * Markdown PDF CSS
+ */
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+            padding: 0 12px;
+        }
+
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+        }
+
+        pre:not(.hljs) {
+            padding: 23px;
+            line-height: 19px;
+        }
+
+        blockquote {
+            background: rgba(127, 127, 127, 0.1);
+            border-color: rgba(0, 122, 204, 0.5);
+        }
+
+        .emoji {
+            height: 1.4em;
+        }
+
+        code {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        /* for inline code */
+        :not(pre):not(.hljs)>code {
+            color: #C9AE75;
+            /* Change the old color so it seems less like an error */
+            font-size: inherit;
+        }
+
+        /* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+        .page {
+            page-break-after: always;
+        }
+    </style>
+
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+
+<body>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+                ? 'dark'
+                : 'default'
+        });
+    </script>
+    <pre><code class="language-mermaid"><div class="mermaid">graph TD
+I029_254and2 --> |I029_255.port2|I029_255or2 --> |I029_248.port2|I029_248nand2 --> |I029_249.port1|I029_249not1 --> |I029_250.port1|I029_250and2 --> |I029_251.port1|I029_251and2 --> |I029_252.port1|I029_252not1 --> |I029_253.port1|I029_253not1 --> |I029_254.port1|I029_254and2
+I029_258or2 --> |I029_260.port2|I029_260and2 --> |I029_254.port2|I029_254and2 --> |I029_259.port1|I029_259not1 --> |I029_256.port2|I029_256or2 --> |I029_257.port2|I029_257or2 --> |I029_258.port2|I029_258or2
+I489_328or2 --> |I489_329.port1|I489_329and2 --> |I489_330.port1|I489_330nand2 --> |I489_331.port1|I489_331not1 --> |I489_322.port1|I489_322nand2 --> |I489_323.port2|I489_323or2 --> |I489_324.port1|I489_324nand2 --> |I489_325.port1|I489_325or2 --> |I489_326.port2|I489_326nand2 --> |I489_327.port1|I489_327not1 --> |I489_328.port1|I489_328or2
+I489_323or2 --> |I489_338.port1|I489_338not1 --> |I489_332.port1|I489_332or2 --> |I489_333.port1|I489_333and2 --> |I489_334.port1|I489_334and2 --> |I489_335.port2|I489_335or2 --> |I489_336.port1|I489_336not1 --> |I489_337.port1|I489_337nand2 --> |I489_339.port2|I489_339and2 --> |I489_323.port1|I489_323or2
+I138_243nand2 --> |I138_244.port1|I138_244nand2 --> |I138_245.port1|I138_245not1 --> |I138_246.port1|I138_246not1 --> |I138_247.port1|I138_247not1 --> |I138_240.port1|I138_240and2 --> |I138_241.port2|I138_241or2 --> |I138_242.port2|I138_242and2 --> |I138_243.port1|I138_243nand2
+I138_242and2 --> |I138_253.port1|I138_253not1 --> |I138_248.port1|I138_248nand2 --> |I138_249.port2|I138_249or2 --> |I138_250.port2|I138_250and2 --> |I138_251.port1|I138_251nand2 --> |I138_252.port1|I138_252or2 --> |I138_254.port2|I138_254and2 --> |I138_242.port1|I138_242and2
+I303_198and2 --> |I303_199.port1|I303_199not1 --> |I303_196.port2|I303_196nand2 --> |I303_197.port1|I303_197not1 --> |I303_198.port2|I303_198and2
+I303_196nand2 --> |I303_209.port1|I303_209not1 --> |I303_200.port1|I303_200not1 --> |I303_201.port1|I303_201not1 --> |I303_202.port1|I303_202or2 --> |I303_203.port1|I303_203nand2 --> |I303_204.port1|I303_204not1 --> |I303_205.port1|I303_205and2 --> |I303_206.port1|I303_206not1 --> |I303_207.port2|I303_207and2 --> |I303_208.port1|I303_208or2 --> |I303_210.port2|I303_210and2 --> |I303_196.port1|I303_196nand2
+I476_254and2 --> |I476_255.port1|I476_255not1 --> |I476_256.port1|I476_256not1 --> |I476_257.port1|I476_257or2 --> |I476_258.port2|I476_258nand2 --> |I476_259.port2|I476_259and2 --> |I476_251.port1|I476_251nand2 --> |I476_252.port1|I476_252not1 --> |I476_253.port1|I476_253nand2 --> |I476_254.port2|I476_254and2
+I285_027or2 --> |I285_028.port2|I285_028and2 --> |I285_029.port1|I285_029nand2 --> |I285_030.port1|I285_030and2 --> |I285_031.port2|I285_031or2 --> |I285_032.port2|I285_032or2 --> |I285_033.port1|I285_033or2 --> |I285_034.port2|I285_034or2 --> |I285_024.port1|I285_024not1 --> |I285_025.port1|I285_025not1 --> |I285_026.port1|I285_026nand2 --> |I285_027.port1|I285_027or2
+I088_454or2 --> |I088_455.port1|I088_455not1 --> |I088_453.port1|I088_453not1 --> |I088_454.port1|I088_454or2
+I088_464nand2 --> |I088_466.port2|I088_466and2 --> |I088_454.port2|I088_454or2 --> |I088_465.port1|I088_465not1 --> |I088_456.port2|I088_456nand2 --> |I088_457.port2|I088_457and2 --> |I088_458.port2|I088_458and2 --> |I088_459.port1|I088_459nand2 --> |I088_460.port2|I088_460nand2 --> |I088_461.port1|I088_461or2 --> |I088_462.port1|I088_462or2 --> |I088_463.port1|I088_463or2 --> |I088_464.port2|I088_464nand2
+I139_230and2 --> |I139_228.port2|I139_228nand2 --> |I139_229.port2|I139_229or2 --> |I139_230.port2|I139_230and2
+I338_356and2 --> |I338_357.port1|I338_357nand2 --> |I338_358.port2|I338_358and2 --> |I338_359.port2|I338_359and2 --> |I338_360.port1|I338_360not1 --> |I338_361.port1|I338_361or2 --> |I338_356.port2|I338_356and2
+I372_146and2 --> |I372_147.port1|I372_147or2 --> |I372_148.port1|I372_148and2 --> |I372_149.port2|I372_149nand2 --> |I372_150.port2|I372_150and2 --> |I372_151.port1|I372_151nand2 --> |I372_152.port1|I372_152nand2 --> |I372_153.port1|I372_153and2 --> |I372_146.port1|I372_146and2
+I114_270and2 --> |I114_271.port1|I114_271not1 --> |I114_272.port2|I114_272or2 --> |I114_273.port2|I114_273nand2 --> |I114_274.port2|I114_274nand2 --> |I114_275.port2|I114_275nand2 --> |I114_265.port1|I114_265and2 --> |I114_266.port1|I114_266nand2 --> |I114_267.port1|I114_267not1 --> |I114_268.port1|I114_268and2 --> |I114_269.port2|I114_269and2 --> |I114_270.port2|I114_270and2
+I114_274nand2 --> |I114_283.port1|I114_283not1 --> |I114_276.port1|I114_276nand2 --> |I114_277.port2|I114_277or2 --> |I114_278.port2|I114_278and2 --> |I114_279.port1|I114_279not1 --> |I114_280.port2|I114_280or2 --> |I114_281.port1|I114_281or2 --> |I114_282.port2|I114_282or2 --> |I114_284.port2|I114_284and2 --> |I114_274.port1|I114_274nand2
+I093_429nand2 --> |I093_425.port1|I093_425and2 --> |I093_426.port1|I093_426nand2 --> |I093_427.port2|I093_427or2 --> |I093_428.port1|I093_428and2 --> |I093_429.port2|I093_429nand2
+I093_427or2 --> |I093_441.port1|I093_441not1 --> |I093_430.port1|I093_430nand2 --> |I093_431.port1|I093_431not1 --> |I093_432.port1|I093_432nand2 --> |I093_433.port1|I093_433nand2 --> |I093_434.port2|I093_434and2 --> |I093_435.port2|I093_435or2 --> |I093_436.port1|I093_436and2 --> |I093_437.port1|I093_437not1 --> |I093_438.port2|I093_438and2 --> |I093_439.port2|I093_439or2 --> |I093_440.port1|I093_440not1 --> |I093_442.port2|I093_442and2 --> |I093_427.port1|I093_427or2
+I186_063nand2 --> |I186_064.port2|I186_064or2 --> |I186_065.port2|I186_065and2 --> |I186_066.port1|I186_066not1 --> |I186_067.port1|I186_067not1 --> |I186_060.port1|I186_060nand2 --> |I186_061.port1|I186_061and2 --> |I186_062.port1|I186_062not1 --> |I186_063.port1|I186_063nand2
+I186_078or2 --> |I186_080.port2|I186_080and2 --> |I186_063.port2|I186_063nand2 --> |I186_079.port1|I186_079not1 --> |I186_068.port1|I186_068and2 --> |I186_069.port2|I186_069nand2 --> |I186_070.port2|I186_070and2 --> |I186_071.port2|I186_071or2 --> |I186_072.port1|I186_072and2 --> |I186_073.port1|I186_073and2 --> |I186_074.port2|I186_074or2 --> |I186_075.port1|I186_075or2 --> |I186_076.port2|I186_076and2 --> |I186_077.port1|I186_077and2 --> |I186_078.port2|I186_078or2
+I262_066or2 --> |I262_067.port1|I262_067not1 --> |I262_068.port1|I262_068or2 --> |I262_069.port2|I262_069and2 --> |I262_070.port1|I262_070not1 --> |I262_071.port1|I262_071and2 --> |I262_072.port2|I262_072and2 --> |I262_073.port2|I262_073and2 --> |I262_062.port1|I262_062or2 --> |I262_063.port2|I262_063or2 --> |I262_064.port2|I262_064or2 --> |I262_065.port2|I262_065and2 --> |I262_066.port1|I262_066or2
+I487_077nand2 --> |I487_078.port1|I487_078and2 --> |I487_076.port1|I487_076not1 --> |I487_077.port2|I487_077nand2
+I487_078and2 --> |I487_090.port1|I487_090not1 --> |I487_079.port1|I487_079not1 --> |I487_080.port1|I487_080not1 --> |I487_081.port2|I487_081or2 --> |I487_082.port2|I487_082nand2 --> |I487_083.port1|I487_083not1 --> |I487_084.port2|I487_084nand2 --> |I487_085.port2|I487_085or2 --> |I487_086.port2|I487_086nand2 --> |I487_087.port2|I487_087nand2 --> |I487_088.port2|I487_088and2 --> |I487_089.port1|I487_089or2 --> |I487_091.port2|I487_091and2 --> |I487_078.port2|I487_078and2
+I158_041nand2 --> |I158_042.port1|I158_042nand2 --> |I158_043.port2|I158_043or2 --> |I158_044.port1|I158_044and2 --> |I158_045.port1|I158_045and2 --> |I158_046.port1|I158_046not1 --> |I158_047.port2|I158_047or2 --> |I158_037.port2|I158_037or2 --> |I158_038.port1|I158_038nand2 --> |I158_039.port1|I158_039not1 --> |I158_040.port1|I158_040and2 --> |I158_041.port1|I158_041nand2
+I375_269nand2 --> |I375_270.port1|I375_270not1 --> |I375_271.port1|I375_271not1 --> |I375_262.port1|I375_262nand2 --> |I375_263.port1|I375_263not1 --> |I375_264.port1|I375_264not1 --> |I375_265.port2|I375_265and2 --> |I375_266.port2|I375_266nand2 --> |I375_267.port1|I375_267or2 --> |I375_268.port1|I375_268nand2 --> |I375_269.port1|I375_269nand2
+I375_265and2 --> |I375_282.port1|I375_282not1 --> |I375_272.port2|I375_272or2 --> |I375_273.port1|I375_273not1 --> |I375_274.port2|I375_274and2 --> |I375_275.port1|I375_275not1 --> |I375_276.port2|I375_276and2 --> |I375_277.port2|I375_277and2 --> |I375_278.port1|I375_278or2 --> |I375_279.port1|I375_279nand2 --> |I375_280.port2|I375_280nand2 --> |I375_281.port2|I375_281or2 --> |I375_283.port2|I375_283and2 --> |I375_265.port1|I375_265and2
+I192_265or2 --> |I192_266.port2|I192_266nand2 --> |I192_267.port1|I192_267and2 --> |I192_259.port1|I192_259and2 --> |I192_260.port1|I192_260and2 --> |I192_261.port2|I192_261and2 --> |I192_262.port1|I192_262or2 --> |I192_263.port2|I192_263nand2 --> |I192_264.port1|I192_264or2 --> |I192_265.port1|I192_265or2
+I317_342or2 --> |I317_343.port1|I317_343or2 --> |I317_344.port2|I317_344nand2 --> |I317_345.port2|I317_345nand2 --> |I317_346.port1|I317_346nand2 --> |I317_347.port1|I317_347not1 --> |I317_348.port2|I317_348or2 --> |I317_349.port1|I317_349or2 --> |I317_350.port1|I317_350and2 --> |I317_340.port2|I317_340and2 --> |I317_341.port1|I317_341not1 --> |I317_342.port1|I317_342or2
+I127_512or2 --> |I127_513.port1|I127_513or2 --> |I127_503.port2|I127_503and2 --> |I127_504.port2|I127_504or2 --> |I127_505.port1|I127_505not1 --> |I127_506.port2|I127_506and2 --> |I127_507.port2|I127_507nand2 --> |I127_508.port2|I127_508or2 --> |I127_509.port1|I127_509not1 --> |I127_510.port2|I127_510nand2 --> |I127_511.port2|I127_511nand2 --> |I127_512.port1|I127_512or2
+I127_510nand2 --> |I127_525.port1|I127_525not1 --> |I127_514.port1|I127_514or2 --> |I127_515.port1|I127_515or2 --> |I127_516.port1|I127_516nand2 --> |I127_517.port1|I127_517nand2 --> |I127_518.port2|I127_518or2 --> |I127_519.port2|I127_519and2 --> |I127_520.port2|I127_520or2 --> |I127_521.port1|I127_521not1 --> |I127_522.port1|I127_522not1 --> |I127_523.port2|I127_523and2 --> |I127_524.port1|I127_524or2 --> |I127_526.port2|I127_526and2 --> |I127_510.port1|I127_510nand2
+I173_285or2 --> |I173_286.port1|I173_286or2 --> |I173_287.port2|I173_287and2 --> |I173_288.port1|I173_288and2 --> |I173_289.port2|I173_289or2 --> |I173_290.port1|I173_290and2 --> |I173_291.port2|I173_291and2 --> |I173_282.port1|I173_282not1 --> |I173_283.port1|I173_283not1 --> |I173_284.port2|I173_284nand2 --> |I173_285.port2|I173_285or2
+I203_367or2 --> |I203_368.port1|I203_368and2 --> |I203_369.port1|I203_369and2 --> |I203_370.port2|I203_370and2 --> |I203_371.port1|I203_371not1 --> |I203_372.port1|I203_372not1 --> |I203_366.port1|I203_366not1 --> |I203_367.port2|I203_367or2
+I203_385and2 --> |I203_367.port1|I203_367or2 --> |I203_384.port1|I203_384not1 --> |I203_373.port1|I203_373not1 --> |I203_374.port1|I203_374nand2 --> |I203_375.port1|I203_375and2 --> |I203_376.port1|I203_376nand2 --> |I203_377.port1|I203_377and2 --> |I203_378.port1|I203_378and2 --> |I203_379.port1|I203_379not1 --> |I203_380.port1|I203_380not1 --> |I203_381.port1|I203_381not1 --> |I203_382.port1|I203_382or2 --> |I203_383.port2|I203_383nand2 --> |I203_385.port2|I203_385and2
+I022_164and2 --> |I022_165.port1|I022_165and2 --> |I022_166.port1|I022_166or2 --> |I022_167.port2|I022_167nand2 --> |I022_168.port2|I022_168nand2 --> |I022_169.port1|I022_169nand2 --> |I022_170.port2|I022_170or2 --> |I022_171.port2|I022_171and2 --> |I022_172.port2|I022_172or2 --> |I022_163.port2|I022_163or2 --> |I022_164.port1|I022_164and2
+I431_273or2 --> |I431_274.port1|I431_274not1 --> |I431_275.port2|I431_275or2 --> |I431_276.port2|I431_276or2 --> |I431_273.port2|I431_273or2
+I431_281and2 --> |I431_282.port2|I431_282or2 --> |I431_283.port1|I431_283not1 --> |I431_285.port2|I431_285and2 --> |I431_273.port1|I431_273or2 --> |I431_284.port1|I431_284not1 --> |I431_277.port2|I431_277nand2 --> |I431_278.port1|I431_278not1 --> |I431_279.port1|I431_279and2 --> |I431_280.port1|I431_280and2 --> |I431_281.port1|I431_281and2
+I445_400nand2 --> |I445_401.port2|I445_401or2 --> |I445_402.port2|I445_402and2 --> |I445_403.port1|I445_403nand2 --> |I445_399.port1|I445_399nand2 --> |I445_400.port1|I445_400nand2
+I445_404nand2 --> |I445_405.port1|I445_405or2 --> |I445_406.port1|I445_406not1 --> |I445_407.port2|I445_407nand2 --> |I445_408.port2|I445_408and2 --> |I445_409.port2|I445_409or2 --> |I445_411.port2|I445_411and2 --> |I445_400.port2|I445_400nand2 --> |I445_410.port1|I445_410not1 --> |I445_404.port2|I445_404nand2
+I039_502or2 --> |I039_503.port1|I039_503not1 --> |I039_504.port1|I039_504or2 --> |I039_505.port2|I039_505nand2 --> |I039_506.port1|I039_506not1 --> |I039_507.port1|I039_507not1 --> |I039_508.port2|I039_508nand2 --> |I039_498.port1|I039_498or2 --> |I039_499.port1|I039_499and2 --> |I039_500.port1|I039_500nand2 --> |I039_501.port2|I039_501and2 --> |I039_502.port2|I039_502or2
+I039_498or2 --> |I039_516.port1|I039_516not1 --> |I039_509.port1|I039_509not1 --> |I039_510.port2|I039_510or2 --> |I039_511.port1|I039_511not1 --> |I039_512.port1|I039_512or2 --> |I039_513.port1|I039_513nand2 --> |I039_514.port2|I039_514and2 --> |I039_515.port1|I039_515not1 --> |I039_517.port2|I039_517and2 --> |I039_498.port2|I039_498or2
+I082_342or2 --> |I082_343.port1|I082_343not1 --> |I082_344.port2|I082_344and2 --> |I082_339.port2|I082_339nand2 --> |I082_340.port1|I082_340or2 --> |I082_341.port1|I082_341not1 --> |I082_342.port1|I082_342or2
+I484_094or2 --> |I484_095.port1|I484_095not1 --> |I484_091.port1|I484_091and2 --> |I484_092.port1|I484_092nand2 --> |I484_093.port1|I484_093not1 --> |I484_094.port1|I484_094or2
+I484_096nand2 --> |I484_097.port1|I484_097not1 --> |I484_098.port1|I484_098not1 --> |I484_100.port2|I484_100and2 --> |I484_094.port2|I484_094or2 --> |I484_099.port1|I484_099not1 --> |I484_096.port1|I484_096nand2
+I318_386and2 --> |I318_387.port1|I318_387and2 --> |I318_388.port1|I318_388not1 --> |I318_389.port2|I318_389or2 --> |I318_390.port1|I318_390not1 --> |I318_382.port1|I318_382not1 --> |I318_383.port1|I318_383not1 --> |I318_384.port1|I318_384and2 --> |I318_385.port2|I318_385or2 --> |I318_386.port1|I318_386and2
+I318_384and2 --> |I318_396.port1|I318_396not1 --> |I318_391.port2|I318_391or2 --> |I318_392.port1|I318_392not1 --> |I318_393.port1|I318_393and2 --> |I318_394.port2|I318_394nand2 --> |I318_395.port1|I318_395or2 --> |I318_397.port2|I318_397and2 --> |I318_384.port2|I318_384and2
+I164_191or2 --> |I164_192.port2|I164_192nand2 --> |I164_193.port1|I164_193or2 --> |I164_194.port1|I164_194nand2 --> |I164_187.port1|I164_187not1 --> |I164_188.port1|I164_188not1 --> |I164_189.port2|I164_189nand2 --> |I164_190.port1|I164_190not1 --> |I164_191.port2|I164_191or2
+I226_402nand2 --> |I226_395.port1|I226_395nand2 --> |I226_396.port1|I226_396not1 --> |I226_397.port2|I226_397or2 --> |I226_398.port1|I226_398not1 --> |I226_399.port1|I226_399not1 --> |I226_400.port1|I226_400and2 --> |I226_401.port1|I226_401and2 --> |I226_402.port1|I226_402nand2
+I127_495nand2 --> |I127_496.port1|I127_496nand2 --> |I127_497.port1|I127_497not1 --> |I127_498.port1|I127_498or2 --> |I127_499.port1|I127_499nand2 --> |I127_500.port1|I127_500not1 --> |I127_501.port1|I127_501or2 --> |I127_502.port1|I127_502and2 --> |I127_491.port1|I127_491not1 --> |I127_492.port1|I127_492not1 --> |I127_493.port1|I127_493or2 --> |I127_494.port1|I127_494not1 --> |I127_495.port1|I127_495nand2
+I373_105or2 --> |I373_106.port2|I373_106nand2 --> |I373_107.port1|I373_107nand2 --> |I373_102.port1|I373_102not1 --> |I373_103.port2|I373_103or2 --> |I373_104.port1|I373_104nand2 --> |I373_105.port2|I373_105or2
+
+</div></code></pre>
+
+</body>
+
+</html>
